@@ -1,8 +1,8 @@
 "use client"
 import React from 'react';
-import Image from 'next/image';
 
 import { useState, useEffect } from 'react';
+import Scrollimg from './Scrollimg';
 
 function Homepage() {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -51,35 +51,7 @@ function Homepage() {
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8 md:mt-12">
-          <div className="col-span-1">
-            <Image
-              src="/images/spotlight-1.jpg"
-              alt="Spotlight Image 1"
-              width={300}
-              height={200}
-              className="rounded-lg w-full h-auto"
-            />
-          </div>
-          <div className="col-span-1">
-            <Image
-              src="/images/spotlight-2.jpg"
-              alt="Spotlight Image 2"
-              width={300}
-              height={200}
-              className="rounded-lg w-full h-auto"
-            />
-          </div>
-          <div className="col-span-1">
-            <Image
-              src="/images/spotlight-3.jpg"
-              alt="Spotlight Image 3"
-              width={300}
-              height={200}
-              className="rounded-lg w-full h-auto"
-            />
-          </div>
-        </div>
+        <Scrollimg />
       </div>
     </div>
   );
